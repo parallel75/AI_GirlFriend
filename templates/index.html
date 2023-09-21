@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>AI Girl Friend</h1>
+    <form method="POST" action="/send_message">
+        <input type="text" name="human_input" placeholder="Enter your message ">
+        <button type="submit">Send</button>
+    </form>
+    <div id="response_message"></div>
+
+    <script>
+        const form = document.querySelector('form');
+        const responseMessage = document.getElementById('response_message');
+
+        form.addEventListener('submit',function (e){
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('/send_message',{
+                method:'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    responseMessage.innerHTML = data;
+                });
+            form.reset();
+        });
+
+
+    </script>
+</body>
+</html>
