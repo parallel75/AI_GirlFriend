@@ -23,7 +23,7 @@
 * ALI_CLOUD_ACCESS_KEY_SECRET=
 
 ## 视频讲解
-* B站      
+* B站       https://www.bilibili.com/video/BV1yH4y1S7jJ/
 * youtube   https://youtu.be/v4U1DwQasiM
 
 ## 小小声明
